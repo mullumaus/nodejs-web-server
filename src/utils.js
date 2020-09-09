@@ -26,7 +26,8 @@ const forcast = (latitude, longitude, callback) => {
             callback('forecast Unable to find location',undefined)
         }else{
             const current = response.body.current
-            const outString = current.weather_descriptions +". It is currently "+current.temperature+" degrees. There is a " + current.precip +"% chance of raining"   
+            let outString = current.weather_descriptions +". It is currently "+current.temperature+" degrees. There is a " + current.precip +"% chance of raining. "   
+            outString += 'Wind degree ' +current.wind_degree+'. Humidity is '+current.humidity
             console.log(outString)
             callback(undefined,outString)
         }
