@@ -37,7 +37,7 @@ app.get('/help',(req,res)=>{
     //     }
     // ])
     res.render('help',{
-        helpText:'How can I help you',
+        helpText:'How can I help you?',
         title: 'Help',
         name:'James'
     })
@@ -46,7 +46,7 @@ app.get('/help',(req,res)=>{
 app.get('/about',(req,res)=>{
     //res.send('<h1>About</h1>')
     res.render('about',{
-        title:'James',
+        title:'About',
         name: 'James Wang'
     })
 })
