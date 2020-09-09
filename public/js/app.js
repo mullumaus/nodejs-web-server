@@ -9,7 +9,7 @@ console.log('Client side javascript file is loaded')
 // })
 
 function fetchWeatch(address=''){
-    const url = 'http://localhost:3000/weather?address='+address
+    const url = '/weather?address='+address
     fetch(url).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
